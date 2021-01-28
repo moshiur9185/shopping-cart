@@ -79,13 +79,7 @@
    </section>
 
    <script>
-      // case increase && decrease
-      document.getElementById("case-increase").addEventListener("click", function () {
-         handleProductChange('case', true);
-      })
-      document.getElementById("case-decrease").addEventListener("click", function () {
-         handleProductChange('case', false);
-      })
+
 
 
       // phone increase && decrease
@@ -99,7 +93,15 @@
          handleProductChange('phone', false);
       });
 
+      // case increase && decrease
+      document.getElementById("case-increase").addEventListener("click", function () {
+         handleProductChange('case', true);
+      })
+      document.getElementById("case-decrease").addEventListener("click", function () {
+         handleProductChange('case', false);
+      })
 
+      // function for phone && case
       function handleProductChange(product, isIncrease) {
          const productInput = document.getElementById(product + '-count');
          const productCount = parseInt(productInput.value);
